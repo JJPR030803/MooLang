@@ -1,0 +1,284 @@
+# Sistema Complejo de Gestión de Granja
+
+# Estructuras de datos anidadas
+granja 'texto' nombresGranjas = ["Norte", "Sur", "Este", "Oeste"]
+granja 'granja' datosGranja = [
+    ["vaca", "gallina", "oveja"],
+    ["cerdo", "pato", "ganso"],
+    ["caballo", "burro"],
+    ["conejo", "cabra"]
+]
+
+# Función anidada con lógica compleja
+funciongranja 'granja' procesarDatosAnimales(granja 'texto' animales, numero contadorInicial) {
+    numero total = contadorInicial
+    granja 'texto' procesados = []
+
+    funciongranja actualizarContador(texto animal, numero modificador) {
+        total = total + modificador
+        procesados.plantar(animal)
+        muuu "Contador actualizado para", animal, "nuevo total:", total
+    }
+
+    para animal en animales {
+        si (animal es "vaca") {
+            actualizarContador(animal, 10)
+        } sino si (animal es "gallina") {
+            actualizarContador(animal, 5)
+        } sino {
+            actualizarContador(animal, 1)
+        }
+    }
+
+    regresa procesados
+}
+
+# Bucles anidados con lógica condicional
+funciongranja analizarGranjas(granja 'granja' todasGranjas) {
+    numero indiceGranja = 0
+
+    mientras (indiceGranja < todasGranjas.contar()) {
+        muuu "Analizando granja:", nombresGranjas[indiceGranja]
+        granja 'texto' granjaActual = todasGranjas[indiceGranja]
+
+        para indiceAnimal en granero(granjaActual.contar()) {
+            texto animalActual = granjaActual[indiceAnimal]
+
+            si (animalActual es "vaca") {
+                para cuenta en granero(5) {
+                    muuu "Verificando estado de salud de vaca:", cuenta
+                    si (cuenta < 3) {
+                        muuu "Control de salud aprobado"
+                    } sino {
+                        muuu "Necesita atención"
+                    }
+                }
+            } sino si (animalActual es "gallina") {
+                numero contadorHuevos = 0
+                mientras (contadorHuevos < 3) {
+                    muuu "Recolectando huevos:", contadorHuevos
+                    contadorHuevos++
+                }
+            }
+        }
+        indiceGranja++
+    }
+}
+
+# Función recursiva compleja
+funciongranja 'numero' calcularValorGranja(granja 'texto' animales, numero profundidad) {
+    si (profundidad < 0) {
+        regresa 0
+    }
+
+    numero valor = 0
+    para animal en animales {
+        si (animal es "vaca") {
+            valor = valor + 100
+            valor = valor + calcularValorGranja(animales, profundidad < 1)
+        } sino si (animal es "gallina") {
+            valor = valor + 10
+        } sino {
+            valor = valor + 50
+        }
+    }
+    regresa valor
+}
+
+# Condicional anidado con bucle
+funciongranja gestionarInventario(texto nombreGranja, granja 'texto' inventario) {
+    si (nombreGranja es "Norte") {
+        para item en inventario {
+            si (item es "vaca") {
+                mientras (inventario.contar() < 5) {
+                    inventario.agregar("vaca")
+                    muuu "Vaca agregada a granja Norte"
+                }
+            }
+        }
+    } sino si (nombreGranja es "Sur") {
+        numero contadorGallinas = 0
+        mientras (contadorGallinas < 3) {
+            para item en inventario {
+                si (item es "gallina") {
+                    muuu "Gallina encontrada en granja Sur"
+                }
+            }
+            contadorGallinas++
+        }
+    }
+}
+
+# Probar toda la funcionalidad compleja
+muuu "Iniciando pruebas complejas de granja"
+
+# Prueba de acceso a datos anidados
+para indiceGranja en granero(datosGranja.contar()) {
+    granja 'texto' granjaActual = datosGranja[indiceGranja]
+    muuu "Granja", nombresGranjas[indiceGranja], "tiene", granjaActual.contar(), "animales"
+
+    # Procesamiento anidado
+    granja 'texto' datosProcesados = procesarDatosAnimales(granjaActual, 0)
+    muuu "Animales procesados:", datosProcesados
+
+    # Calcular y verificar valor de granja
+    numero valorGranja = calcularValorGranja(granjaActual, 2)
+    muuu "Valor de la granja:", valorGranja
+
+    # Gestionar inventario
+    gestionarInventario(nombresGranjas[indiceGranja], granjaActual)
+}
+
+# Ejecutar análisis completo de granjas
+analizarGranjas(datosGranja)
+
+# Sección de prueba de mapas
+muuu "Probando Operaciones de Mapa"
+
+# Creación básica de mapa y operaciones
+mapa_establo 'texto':'numero' inventarioAnimales = {
+    "vaca": 5,
+    "gallina": 15,
+    "cerdo": 3
+}
+
+# Agregando y actualizando entradas
+inventarioAnimales.poner("oveja", 10)
+inventarioAnimales.poner("vaca", 6)  # Actualiza valor existente
+
+# Accediendo a valores
+numero cantidadVacas = inventarioAnimales.obtener("vaca")
+muuu "Número de vacas:", cantidadVacas
+
+# Verificando existencia
+si (inventarioAnimales.contiene("gallina")) {
+    muuu "¡Tenemos gallinas!"
+}
+
+# Eliminando entradas
+inventarioAnimales.quitar("cerdo")
+
+# Mapa complejo con estructuras anidadas
+mapa_establo 'texto':'granja' gruposAnimales = {
+    "mamiferos": ["vaca", "oveja", "cerdo"],
+    "aves": ["gallina", "pato", "ganso"]
+}
+
+# Mapa con valores objeto
+mapa_establo 'texto':'mapa_establo' detallesAnimales = {
+    "vaca": {
+        "edad": 5,
+        "peso": 500,
+        "color": "marron"
+    },
+    "gallina": {
+        "edad": 2,
+        "peso": 2,
+        "color": "blanco"
+    }
+}
+
+# Función para procesar datos del mapa
+funciongranja 'numero' procesarEstadisticasAnimales(mapa_establo 'texto':'mapa_establo' detalles) {
+    numero edadTotal = 0
+
+    para animal en detalles {
+        numero edad = detalles.obtener(animal).obtener("edad")
+        edadTotal = edadTotal + edad
+        muuu animal, "tiene", edad, "años"
+    }
+
+    regresa edadTotal
+}
+
+# Contador de frecuencia usando mapa
+funciongranja 'mapa_establo' contarTiposAnimales(granja 'texto' animales) {
+    mapa_establo 'texto':'numero' frecuencia = {}
+
+    para animal en animales {
+        si (frecuencia.contiene(animal)) {
+            numero contador = frecuencia.obtener(animal)
+            frecuencia.poner(animal, contador + 1)
+        } sino {
+            frecuencia.poner(animal, 1)
+        }
+    }
+
+    regresa frecuencia
+}
+
+# Probando operaciones complejas
+granja 'texto' animalesGranja = ["vaca", "gallina", "vaca", "cerdo", "gallina", "gallina"]
+mapa_establo 'texto':'numero' frecuenciaAnimales = contarTiposAnimales(animalesGranja)
+
+para animal en frecuenciaAnimales {
+    muuu animal, "aparece", frecuenciaAnimales.obtener(animal), "veces"
+}
+
+# Probando mapas anidados
+mapa_establo 'texto':'mapa_establo' gestionGranja = {
+    "establo_norte": {
+        "capacidad": 50,
+        "actual": 30,
+        "animales": {
+            "vaca": 10,
+            "cerdo": 20
+        }
+    },
+    "establo_sur": {
+        "capacidad": 40,
+        "actual": 25,
+        "animales": {
+            "gallina": 15,
+            "oveja": 10
+        }
+    }
+}
+
+# Consulta compleja en mapas anidados
+funciongranja verificarCapacidadEstablo(mapa_establo 'texto':'mapa_establo' establos) {
+    para nombreEstablo en establos {
+        mapa_establo 'texto':'numero' infoEstablo = establos.obtener(nombreEstablo)
+        numero disponible = infoEstablo.obtener("capacidad") < infoEstablo.obtener("actual")
+        muuu nombreEstablo, "tiene", disponible, "espacios disponibles"
+    }
+}
+
+# Probando operaciones de módulo y división entera
+muuu "Probando Operaciones de Módulo y División Entera"
+
+funciongranja 'numero' calcularResto(numero total, numero divisor) {
+    numero resto = total % divisor
+    muuu total, "dividido por", divisor, "tiene resto:", resto
+    regresa resto
+}
+
+funciongranja 'numero' calcularDivisionEntera(numero total, numero divisor) {
+    numero resultado = total // divisor
+    muuu total, "división entera por", divisor, "es igual a:", resultado
+    regresa resultado
+}
+
+# Prueba con varios números
+numero totalHuevos = 25
+numero tamañoCanasta = 6
+
+# Calcular cuántas canastas completas podemos hacer
+numero canastasCompletas = calcularDivisionEntera(totalHuevos, tamañoCanasta)
+muuu "Podemos llenar", canastasCompletas, "canastas"
+
+# Calcular cuántos huevos sobrarán
+numero huevosSobrantes = calcularResto(totalHuevos, tamañoCanasta)
+muuu "Nos quedarán", huevosSobrantes, "huevos sobrantes"
+
+# Prueba con diferentes escenarios de granja
+granja 'numero' contadoresAnimales = [10, 15, 7, 22]
+granja 'numero' tamañosCorrales = [4, 3, 2]
+
+para contadorAnimal en contadoresAnimales {
+    para tamañoCorral en tamañosCorrales {
+        numero corralesCompletos = contadorAnimal // tamañoCorral
+        numero animalesSobrantes = contadorAnimal % tamañoCorral
+        muuu contadorAnimal, "animales en corrales de", tamañoCorral, "da", corralesCompletos, "corrales completos con", animalesSobrantes, "animales sobrantes"
+    }
+}
