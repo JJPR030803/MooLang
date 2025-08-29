@@ -1,0 +1,137 @@
+[language]
+version = "1.0.0"
+default_language = "en"
+
+[keywords.en]
+# Output
+print = "moo"
+
+# Data types
+text_type = "text"
+number_type = "num"
+decimal_type = "dec"
+boolean_type = "boolean"
+array_type = "coop"
+map_type = "barn_map"
+
+# Control flow
+if_keyword = "if"
+else_if_keyword = "else if"
+else_keyword = "else"
+while_keyword = "while"
+for_keyword = "for"
+in_keyword = "in"
+
+# Functions
+function_keyword = "farmfunction"
+return_keyword = "return"
+
+# Comparison
+is_keyword = "is"
+is_not_keyword = "is not"
+
+# Special
+range_keyword = "barn"
+
+[keywords.es]
+# Output
+print = "muuu"
+
+# Data types
+text_type = "texto"
+number_type = "numero"
+decimal_type = "decimal"
+boolean_type = "booleano"
+array_type = "granja"
+map_type = "mapa_establo"
+
+# Control flow
+if_keyword = "si"
+else_if_keyword = "sino si"
+else_keyword = "sino"
+while_keyword = "mientras"
+for_keyword = "para"
+in_keyword = "en"
+
+# Functions
+function_keyword = "funciongranja"
+return_keyword = "regresa"
+
+# Comparison
+is_keyword = "es"
+is_not_keyword = "no es"
+
+# Special
+range_keyword = "granero"
+
+[keywords.de]
+# Output
+print = "muh"
+
+# Data types
+text_type = "text"
+number_type = "nummer"
+decimal_type = "dezimal"
+boolean_type = "boolesch"
+array_type = "stall"
+map_type = "stall_karte"
+
+# Control flow
+if_keyword = "wenn"
+else_if_keyword = "sonst wenn"
+else_keyword = "sonst"
+while_keyword = "während"
+for_keyword = "für"
+in_keyword = "in"
+
+# Functions
+function_keyword = "bauernfunktion"
+return_keyword = "zurück"
+
+# Comparison
+is_keyword = "ist"
+is_not_keyword = "ist nicht"
+
+# Special
+range_keyword = "scheune"
+
+[keywords.ru]
+# Output
+print = "му"
+
+# Data types
+text_type = "текст"
+number_type = "число"
+decimal_type = "дробь"
+boolean_type = "логический"
+array_type = "загон"
+map_type = "карта_сарая"
+
+# Control flow
+if_keyword = "если"
+else_if_keyword = "иначе если"
+else_keyword = "иначе"
+while_keyword = "пока"
+for_keyword = "для"
+in_keyword = "в"
+
+# Functions
+function_keyword = "фермафункция"
+return_keyword = "вернуть"
+
+# Comparison
+is_keyword = "есть"
+is_not_keyword = "не есть"
+
+# Special
+range_keyword = "сарай"
+
+# Example custom teacher configuration
+[keywords.custom]
+# Teacher can customize keywords for their class
+print = "say"
+text_type = "string"
+number_type = "integer"
+if_keyword = "when"
+else_keyword = "otherwise"
+function_keyword = "procedure"

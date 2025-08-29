@@ -4,11 +4,11 @@ text name = "chicken"
 
 num numero = 10
 
-dec numberdec = 21.5
+decimal numberdec = 21.5
 
 boolean isHappy = true
 
-coop 'text' granja = ["Ckicken","cows","moooo?"]
+coop 'text' granja = ["Chicken","cows","moooo?"]
 
 granja.add("Hola")
 
